@@ -83,10 +83,10 @@ function draw() {
   /*Descomentar la sentencia correcta para que 
   el juego cambie a estado "END" 
   al golpear el globo rojo*/
-  //if (arrowGroup.isTouching(redB)) 
+  if (arrowGroup.isTouching(redB)) 
   //if (arrowGroup.Collide(redB)) 
   //if (arrowGroup.isCollide(redB)) 
-  if(frameCount>700)//comentar esta línea después de seleccionar la solución
+  //if(frameCount>700)//comentar esta línea después de seleccionar la solución
   {
     redB.destroyEach();
     gameState=END; 
@@ -108,11 +108,11 @@ function draw() {
 destruir el globo azul al ser  
 golpeado por las flechas */
 
-//  if (arrowGroup.isTouching(blueB)) {
-//   blueB.destroyEach();
-//   arrowGroup.destroyEach();
-//   score=score+2;
-// }
+  if (arrowGroup.isTouching(blueB)) {
+   blueB.destroyEach();
+   arrowGroup.destroyEach();
+   score=score+2;
+ }
 
 
 //  if (arrowGroup.isTouching(redB)) {
